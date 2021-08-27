@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="3.38747in" height="2.87971in" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
-viewBox="0 0 3387 2880"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="3.38747in" height="3.387in" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 3387 3387"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2222907266080">
-   <polygon fill="#FEFEFE" points="0,0 3387,0 3387,2880 0,2880 "/>
-   <polygon fill="none" points="0,2109 3387,2109 3387,2880 0,2880 "/>
-   <text x="1177" y="2614"  fill="#606062" stroke="#606062" stroke-width="13.8898" font-weight="300" font-size="340.032px" font-family="Avenir Light">C</text>
-   <text x="1452" y="2614"  fill="#606062" stroke="#606062" stroke-width="13.8898" font-weight="300" font-size="340.032px" font-family="Avenir Light">H</text>
-   <text x="1733" y="2614"  fill="#606062" stroke="#606062" stroke-width="13.8898" font-weight="300" font-size="340.032px" font-family="Avenir Light">A</text>
-   <text x="2002" y="2614"  fill="#606062" stroke="#606062" stroke-width="13.8898" font-weight="300" font-size="340.032px" font-family="Avenir Light">T</text>
-   <path fill="none" stroke="#606062" stroke-width="34.7205" stroke-linecap="square" d="M2033 865l0 -91m-531 676c41,-8 45,-20 58,-37l101 -122c9,-6 14,-7 24,-10l749 0 57 -7c9,-3 38,-25 43,-45 4,-14 5,-38 6,-41 10,-34 2,-552 2,-634l-7 -52c-5,-12 -32,-37 -47,-41 -165,0 -783,-3 -930,-3 -25,4 -44,15 -56,39 -12,24 -8,27 -10,42 -9,27 -3,390 -3,451 0,151 0,302 0,453l10 9m389 490c27,4 0,-464 8,-536m-10 532c-27,8 -38,-8 -76,-55l-88 -105c-10,-3 -20,-4 -29,-7l-740 0c-32,-6 -65,-2 -88,-30 -17,-21 -14,-29 -17,-49 -11,-34 -2,-578 -2,-663 4,-28 5,-47 29,-66 18,-15 32,-13 46,-15 26,-8 342,-2 397,-2m940 -91l0 -71m-448 71l0 -71"/>
+  <g id="_2222900853488">
+   <polygon fill="#FEFEFE" points="0,0 3387,0 3387,3387 0,3387 "/>
+   <text x="1156" y="2813"  fill="#606062" stroke="#606062" stroke-width="27.7796" font-weight="300" font-size="354.296px" font-family="Avenir Light">C</text>
+   <text x="1442" y="2813"  fill="#606062" stroke="#606062" stroke-width="27.7796" font-weight="300" font-size="354.296px" font-family="Avenir Light">H</text>
+   <text x="1735" y="2813"  fill="#606062" stroke="#606062" stroke-width="27.7796" font-weight="300" font-size="354.296px" font-family="Avenir Light">A</text>
+   <text x="2014" y="2813"  fill="#606062" stroke="#606062" stroke-width="27.7796" font-weight="300" font-size="354.296px" font-family="Avenir Light">T</text>
+   <path fill="none" stroke="#606062" stroke-width="41.6654" stroke-linecap="square" d="M2047 991l0 -95m-553 704c43,-8 47,-21 61,-38l104 -127c10,-6 16,-7 26,-11l780 0 59 -7c10,-3 40,-26 46,-46 4,-15 5,-40 5,-44 11,-35 3,-575 3,-660l-8 -54c-5,-13 -33,-39 -48,-43 -173,0 -816,-3 -970,-3 -26,4 -46,16 -58,41 -13,24 -8,28 -11,43 -9,29 -2,406 -2,470 0,157 0,314 0,472l10 10m406 510c27,5 0,-483 7,-558m-9 554c-29,8 -41,-9 -80,-57l-92 -110c-10,-3 -20,-4 -30,-7l-771 0c-34,-6 -68,-2 -92,-31 -18,-22 -14,-30 -17,-51 -12,-36 -3,-602 -3,-691 5,-30 6,-49 31,-69 18,-15 33,-13 48,-16 27,-8 356,-2 413,-2m980 -94l0 -74m-467 74l0 -74"/>
   </g>
  </g>
 </svg>
