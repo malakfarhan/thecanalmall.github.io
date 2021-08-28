@@ -1,23 +1,7 @@
-<style type="text/css">
-   .close {
-    float: right;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 2;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    filter: alpha(opacity=20);
-    opacity: .2;
-    
-    
-}
-</style>
 <div class="col-md-6 padmar-zero">  
-  <img src="{{asset('front-assets/images/contactus/all.jpg')}}" width="100%" height="auto">
+  <img src="images/contactus/all.jpg" width="100%" height="auto">
 </div>
-
 <div class="col-md-6">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
   <div class="main-form main-form-pop-up">
   <h4 class="text-center" >Get In Touch</h4>
   <div class="row mr-5  mt-5"  style="padding-top: 30px; color: #848688; font-size: 0.8em;">
@@ -61,45 +45,33 @@
                     </div>
                     </div>
                   </div>
-                  
-   <form action="{{route('contacts.store')}}" method="post">
-    @csrf  
+  <form action="https://leads.ellingtonproperties.ae/" method="post">
       <ul>
           <li>
-             @error('full_name')
-              <span style="color: red">{{$message}}</span>
-              @enderror
               <label>Full Name</label>
-              <input type="text" name="full_name" class="txt-field" required>
-             
+              <input type="text" name="FullName" class="txt-field" required>
           </li>
           <li>
-             @error('phone_number')
-              <span style="color: red">{{$message}}</span>
-              @enderror
               <label>Phone Number</label>
-              <div><input type="tel" name="phone_number" class="txt-field txtPhone" required></div>
-              <input type="hidden" class="code"  name="c_code">
+              <div><input type="tel" id="txtPhone2" name="PhoneNumber2" class="txt-field" required/></div>
           </li>
           <li>
-             @error('email')
-              <span style="color: red">{{$message}}</span>
-              @enderror
               <label>Email Address</label>
-              <input type="email" name="email" class="txt-field" required>              
+              <input type="email" name="Email" class="txt-field" required>              
           </li>
           <li>
-              <button type="submit" class="cta-btn w100p btnSubmit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>submit">Submit</button>
+              <button type="submit" class="cta-btn w100p" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> submit">Submit</button>
           </li>
       </ul>
     </form>  
   </div>
-</div>
+</div>  
+<!-- Phone number -->
         <script>
         $(function () {
             var code = "+92"; // Assigning value from model.
-            $('.txtPhone').val(code);
-            $('.txtPhone').intlTelInput({
+            $('#txtPhone2').val(code);
+            $('#txtPhone2').intlTelInput({
                 autoHideDialCode: true,
                 autoPlaceholder: "ON",
                 dropdownContainer: document.body,
@@ -108,13 +80,18 @@
                 initialCountry: "auto",
                 nationalMode: true,
                 placeholderNumberType: "MOBILE",
-                preferredCountries: ['Pk'],
+                preferredCountries: ['US'],
                 separateDialCode: true
-          });
-            $('.btnSubmit').on('click', function () {
-                var code = $(".txtPhone").intlTelInput("getSelectedCountryData").dialCode;
-           $('.code').val(code);            });
+            });
+           
         });
+    </script>
+
+        <!-- Phone number -->
+        <script>
+            $(document).ready(function() {
+                $("#PhoneNumberRegisterInterest").CcPicker({
+                    "countryCode": "ae"
+                  });                
+            });        
         </script>
-  
-       
