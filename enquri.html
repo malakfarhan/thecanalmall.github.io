@@ -6,75 +6,100 @@
     line-height: 2;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-
+    filter: alpha(opacity=20);
+    opacity: .2;
+    
     
 }
 </style>
-
-<div class="col-md-8 padmar-zero">
-  <img src="{{asset('front-assets/images/contactus/all1.jpg')}}" height="40%" width="90%">
+<div class="col-md-6 padmar-zero">  
+  <img src="{{asset('front-assets/images/contactus/all.jpg')}}" width="100%" height="auto">
 </div>
+
+<div class="col-md-6">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-<div class="col-md-4">
-
-
   <div class="main-form main-form-pop-up">
-  <h4>Enquri</h4>
-  <form action="{{route('brochures.store')}}" method="post">
-    @csrf
+  <h4 class="text-center" >Get In Touch</h4>
+  <div class="row mr-5  mt-5"  style="padding-top: 30px; color: #848688; font-size: 0.8em;">
+                  <div class="row">
+                    <div class="col-md-6" >
+                      <div class="dbox w-100 d-flex align-items-start">
+                        <div class="text" >
+                         <p>
+                            <span style="font-weight: bold; color: #96989A;" > US Address:</span><br> 1960 E-7 Street 3-E<br>
+                             Brooklyn NY 11223<br>
+                           Contact: +1 (347)351 0936</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="dbox w-100 d-flex align-items-start">
+                        <div class="text">                          
+                           <p><span  style="font-weight: bold; color: #96989A;" >PK Address:</span><br> 64-E Syed Jamal-Ud-Din <br>Afghani Rd University Town, <br>Peshawar  KP, Pakistan<br>Contact: +92 (091) 304 0257</p>
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                      <div class="dbox w-100 d-flex align-items-start">
+                        <div class="text">
+                          <p style=" line-height: 1.5;"><span style="font-weight: bold;">UAE Address:</span><br> Damas Tower <br>
+                            Office 1604 16/2, Al Maktoum Rd <br>
+                          Riggat Al Buteen, Deira Dubai,UAE</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: px;">
+                      <div class="dbox w-100 d-flex align-items-start">
+                         <div class="text" style="margin-top: px !important;">
+                          <p><span style="font-weight: bold;">General Inquiry:</span> <a href="mailto:info@yoursite.com" style="color: #96989A !important;">info@eastmaye.com</a></p>
+                           <p><span style="font-weight: bold;">Dealers Contact:</span> <a href="mailto:info@yoursite.com"style="color: #96989A !important;">partners@eastmaye.com</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  
+   <form action="{{route('contacts.store')}}" method="post">
+    @csrf  
       <ul>
           <li>
-            @error('full_name')
+             @error('full_name')
               <span style="color: red">{{$message}}</span>
               @enderror
-
               <label>Full Name</label>
               <input type="text" name="full_name" class="txt-field" required>
+             
           </li>
           <li>
-              @error('phone_number')
+             @error('phone_number')
               <span style="color: red">{{$message}}</span>
               @enderror
               <label>Phone Number</label>
-              <div><input type="tel" id="txtPhone2" name="phone_number" class="txt-field" required/></div>
+              <div><input type="tel" name="phone_number" class="txt-field txtPhone" required></div>
+              <input type="hidden" class="code"  name="c_code">
           </li>
           <li>
              @error('email')
               <span style="color: red">{{$message}}</span>
               @enderror
               <label>Email Address</label>
-              <input type="email" name="email" class="txt-field" required>
-              
-
-
+              <input type="email" name="email" class="txt-field" required>              
           </li>
-                    
-
           <li>
-              <button type="submit" class="cta-btn w100p" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> submit">Submit</button>
-          </li>
-
-          <li>
-            <small>
-                I agree to share my data with East Maye Properties, and allow East Maye Properties or its affiliates to collect, control or process my data in order to communicate with me. Should I wish to unsubscribe, I will send an email to info@eastmaye.com. For more information on our Terms &amp; Conditions, Please <a href="https://eastmaye.com" target="_blank" >click here</a>.
-                <br> If you are looking for job opportunities, <a href="https://eastmaye.com" target="_blank">click here</a>.
-              </small>
+              <button type="submit" class="cta-btn w100p btnSubmit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>submit">Submit</button>
           </li>
       </ul>
     </form>  
   </div>
-
-</div>  
-
-
-
-
-        <!-- Phone number -->
-       <script>
+</div>
+        <script>
         $(function () {
             var code = "+92"; // Assigning value from model.
-            $('#txtPhone2').val(code);
-            $('#txtPhone2').intlTelInput({
+            $('.txtPhone').val(code);
+            $('.txtPhone').intlTelInput({
                 autoHideDialCode: true,
                 autoPlaceholder: "ON",
                 dropdownContainer: document.body,
@@ -83,10 +108,13 @@
                 initialCountry: "auto",
                 nationalMode: true,
                 placeholderNumberType: "MOBILE",
-                preferredCountries: ['US'],
+                preferredCountries: ['Pk'],
                 separateDialCode: true
-            });
-           
+          });
+            $('.btnSubmit').on('click', function () {
+                var code = $(".txtPhone").intlTelInput("getSelectedCountryData").dialCode;
+           $('.code').val(code);            });
         });
-    </script>
-
+        </script>
+  
+       
