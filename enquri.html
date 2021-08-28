@@ -1,0 +1,92 @@
+<style type="text/css">
+   .close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+
+    
+}
+</style>
+
+<div class="col-md-8 padmar-zero">
+  <img src="{{asset('front-assets/images/contactus/all1.jpg')}}" height="40%" width="90%">
+</div>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+<div class="col-md-4">
+
+
+  <div class="main-form main-form-pop-up">
+  <h4>Enquri</h4>
+  <form action="{{route('brochures.store')}}" method="post">
+    @csrf
+      <ul>
+          <li>
+            @error('full_name')
+              <span style="color: red">{{$message}}</span>
+              @enderror
+
+              <label>Full Name</label>
+              <input type="text" name="full_name" class="txt-field" required>
+          </li>
+          <li>
+              @error('phone_number')
+              <span style="color: red">{{$message}}</span>
+              @enderror
+              <label>Phone Number</label>
+              <div><input type="tel" id="txtPhone2" name="phone_number" class="txt-field" required/></div>
+          </li>
+          <li>
+             @error('email')
+              <span style="color: red">{{$message}}</span>
+              @enderror
+              <label>Email Address</label>
+              <input type="email" name="email" class="txt-field" required>
+              
+
+
+          </li>
+                    
+
+          <li>
+              <button type="submit" class="cta-btn w100p" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> submit">Submit</button>
+          </li>
+
+          <li>
+            <small>
+                I agree to share my data with East Maye Properties, and allow East Maye Properties or its affiliates to collect, control or process my data in order to communicate with me. Should I wish to unsubscribe, I will send an email to info@eastmaye.com. For more information on our Terms &amp; Conditions, Please <a href="https://eastmaye.com" target="_blank" >click here</a>.
+                <br> If you are looking for job opportunities, <a href="https://eastmaye.com" target="_blank">click here</a>.
+              </small>
+          </li>
+      </ul>
+    </form>  
+  </div>
+
+</div>  
+
+
+
+
+        <!-- Phone number -->
+       <script>
+        $(function () {
+            var code = "+92"; // Assigning value from model.
+            $('#txtPhone2').val(code);
+            $('#txtPhone2').intlTelInput({
+                autoHideDialCode: true,
+                autoPlaceholder: "ON",
+                dropdownContainer: document.body,
+                formatOnDisplay: true,
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                nationalMode: true,
+                placeholderNumberType: "MOBILE",
+                preferredCountries: ['US'],
+                separateDialCode: true
+            });
+           
+        });
+    </script>
+
