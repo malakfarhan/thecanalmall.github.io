@@ -26,7 +26,7 @@
           </li>
           <li>
               <label>Phone Number</label>
-              <div class="cc-picker-overide-for-lp"><input type="Number" id="PhoneNumberRegisterInterest" name="PhoneNumber" class="txt-field" required/></div>
+              <div><input type="tel" id="txtPhone2" name="PhoneNumber2" class="txt-field" required/></div>
           </li>
           <li>
               <label>Email Address</label>
@@ -79,7 +79,25 @@
 </div>  
 
 
-
+ <script>
+        $(function () {
+            var code = "+92"; // Assigning value from model.
+            $('#txtPhone2').val(code);
+            $('#txtPhone2').intlTelInput({
+                autoHideDialCode: true,
+                autoPlaceholder: "ON",
+                dropdownContainer: document.body,
+                formatOnDisplay: true,
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                nationalMode: true,
+                placeholderNumberType: "MOBILE",
+                preferredCountries: ['US'],
+                separateDialCode: true
+            });
+           
+        });
+    </script>
 
         <!-- Phone number -->
         <script>
