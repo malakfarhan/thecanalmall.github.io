@@ -43,6 +43,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+/*for close button*/
+ 
 
 
 
@@ -434,12 +436,69 @@ a:hover {color: #4C3733; text-decoration: underline;}
 	margin-top: 30px;
 	display: block;
 }
+/* Galaxy Fold ----------- */
+@media only screen and (min-width : 280px) {
+#txtPhone{
+    width: 106% !important;
+  }
+}
+/* iphone 5/SE ----------- */
+@media only screen and (min-width : 320px) {
+#txtPhone{
+    width: 123% !important;
+  }
+}
+@media only screen and (min-width: 360px) {
+#txtPhone {
+    width: 140%!important;
+  }
+}
+/* iphone 6/7/8/X ----------- */
+@media only screen and (min-width : 375px) {
+#txtPhone{
+    width: 146% !important;
+  }
+}
 
+/* pixel 2/2 XL ----------- */
+@media only screen and (min-width : 411px) {
+#txtPhone{
+    width: 161% !important;
+  }
+}
+/* iPhone 6/7/8/Plus ----------- */
+@media only screen and (min-width : 414px) {
+#txtPhone{
+    width: 162.5% !important;
+  }
+}
+
+
+/* Surface Duo ----------- */
+@media only screen and (min-width : 540px) {
+#txtPhone{
+    width: 216% !important;
+  }
+}
+/* iPad ----------- */
+@media only screen and (min-width : 768px) {
+#txtPhone{
+    width: 313% !important;
+  }
+}
+
+
+/* iPad Pro ----------- */
+@media only screen and (min-width : 1024px) {
+#txtPhone{
+    width: 100% !important;
+  }
+}
 @media screen and (max-width: 990px) {
 	.main-form li {
 		display: block;
 		width: 100%!important;
-		padding: 0.5px;
+		padding: 0 5px;
 		margin-bottom: 20px;
 	}	
 }
@@ -703,7 +762,6 @@ ul.info-icons {
 
 
 .sticky-header {
-	background: rgba(255,255,255,.9);
 	position: fixed;
 	z-index: 9999;
 	height: 75px;
@@ -1083,7 +1141,7 @@ small {
 #OVERIDE
 --------------------------------------------------------------*/
 .modal-dialog {
-    margin-top:100px;
+    margin-top:85px;
 }
 
 
