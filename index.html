@@ -228,7 +228,9 @@
 <div class="call_floats ">
   <a onclick="loadDynamicContentModal('enquri.html')" class="btn-modal-target"><img src="images/socailicon/enqire.svg"  width="50" class="whatsapp_float_enquri"></a>
 </div>
-
+<div class="call_floats ">
+  <a data-toggle="tooltip" title="Download Brochure" onclick="loadDynamicContentModal('brochure')" class="btn-modal-target"><img src="{{asset('front-assets/images/socailicon/download.svg')}}"  width="50" class="whatsapp_float_enquri"></a>
+</div>
 
 <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 <script>
@@ -592,7 +594,7 @@ SECTION
 
         <div class="col-md-4 t-center payment-plan-content">
           <strong class="font-s-3">20%</strong>
-          <span>Down Payment <br> 20 days after booking confirmation</span>
+          <span>Down payment after 30 days of signing booking appliction form</span>
         </div>
 
         <div class="col-md-4 t-center payment-plan-content">
@@ -645,7 +647,9 @@ SECTION FOOTER
             <img src="img/eastmaye.png" width="200">
             <br><br>
             <p>Copyright © 2021 East Maye Properties</p>
-            <br>
+           <br>
+            <h4 style="color: #AA8F84;"><b>Follow Us</b></h4>
+            <span>Follow us on social media for the latest news and updates.</span><br><br>
             <a class="sm-ico" href="https://www.facebook.com/TheCanalMall/" target="_blank"><img src="images/icons/sm_facebook.svg" class="bg-dark" width="30""></a>
             <a class="sm-ico" href="https://www.instagram.com/canalmall" target="_blank"><img src="images/icons/sm_instagram.svg" width="30"></a>
             <a class="sm-ico bg-dark" href="https://m.youtube.com/channel/UCEZoSmVcYmdJOhjnyUprpHQ" target="_blank"><img src="images/icons/sm_youtube.svg" width="30"></a>
@@ -957,7 +961,12 @@ MODAL SECTION
                 var utm_campaign = url.searchParams.get("utm_campaign");
               </script>
 
-    
+    <!-- for download button  -->
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+        </script>
     
         </body>
     </html>
