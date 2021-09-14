@@ -49,7 +49,7 @@
     --round_border_radius: 7px;
     /*padding between the icons and the border*/
          /*TIP! You can use the same padding as the --main_menu_right_side_padding.*/
-  /*  --arrow_padding: var(--main_menu_right_side_padding);*/
+    --arrow_padding: var(--main_menu_right_side_padding);
     --arrow_size: 20px;
 
     --opacity-transition-duration: 0.1s;
@@ -81,8 +81,8 @@
 }
 
 .arrow_menu_right{
-    /*border-top-left-radius: var(--round_border_radius);
-    border-bottom-left-radius: var(--round_border_radius);*/
+    border-top-left-radius: var(--round_border_radius);
+    border-bottom-left-radius: var(--round_border_radius);
 }
 
 .arrow_menu_left{
@@ -133,7 +133,7 @@
 }
 
 .triangle_left{
-    border-right: var(--arrow_size) solid  #8A7D66 !important;
+    border-right: var(--arrow_size) solid  #8A7D66; !important;
 }
 
 .triangle_right{
@@ -142,7 +142,7 @@
 
 #social_media_icon_flyout_parent{
     display: flex;
-    padding: 0px;
+    padding: var(--main_menu_right_side_padding);
    /* background:var(--main_menu_right_side_color);*/
     flex-direction:column;	
     overflow-y: auto;

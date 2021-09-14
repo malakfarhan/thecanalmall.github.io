@@ -35,33 +35,6 @@ $(document).ready(function() {
         return false;
     }
 
-    if(flyout_menu_active===false) {
-			flyout_menu_active=true;
-			if(flyout_menu_side==="left") {
-				$(".social_media_margin_pseudo").animate({marginLeft:"0px"},flyout_animation_speed);
-				$(".arrow_menu_triangle").addClass("triangle_left");
-				$(".arrow_menu_triangle").removeClass("triangle_right");
-			}
-			else{
-				$(".social_media_margin_pseudo").animate({marginRight:"0px"},flyout_animation_speed);
-				$(".arrow_menu_triangle").removeClass("triangle_left");
-				$(".arrow_menu_triangle").addClass("triangle_right");
-			}
-		}
-		else {
-			flyout_menu_active=false;
-			if(flyout_menu_side==="left") {
-				$(".social_media_margin_pseudo").animate({marginLeft: flyout_social_media_width},flyout_animation_speed);
-				$(".arrow_menu_triangle").removeClass("triangle_left");
-				$(".arrow_menu_triangle").addClass("triangle_right");
-			}
-			else{
-				$(".social_media_margin_pseudo").animate({marginRight: flyout_social_media_width},flyout_animation_speed);
-				$(".arrow_menu_triangle").addClass("triangle_left");
-				$(".arrow_menu_triangle").removeClass("triangle_right");				
-			}
-		}
-    
 	if(flyout_menu_side==="left"){
 		$(".arrow_menu:eq(0)").addClass("flyout_hide");
 		$(".social_media_margin_pseudo").css("margin-left",flyout_social_media_width);
